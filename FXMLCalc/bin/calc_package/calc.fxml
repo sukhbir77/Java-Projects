@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane id="BorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="216.0" prefWidth="509.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="calc_package.CalcController">
+  <center>
+    <GridPane>
+      <children>
+        <Label text="Value 1:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="0" />
+        <TextField fx:id="txtV1" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+        <TextField fx:id="txtV2" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+        <Label text="Value 2:" GridPane.columnIndex="0" GridPane.halignment="RIGHT" GridPane.rowIndex="1" />
+        <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="3">
+          <children>
+            <RadioButton fx:id="rbAdd" contentDisplay="CENTER" mnemonicParsing="false" onAction="#doAction" selected="true" text="Add">
+              <toggleGroup>
+                <ToggleGroup fx:id="rb" />
+              </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="rbSub" mnemonicParsing="false" onAction="#doAction" text="Subtract" toggleGroup="$rb" />
+            <RadioButton fx:id="rbMul" mnemonicParsing="false" onAction="#doAction" text="Multiply" toggleGroup="$rb" />
+            <RadioButton fx:id="rbDiv" mnemonicParsing="false" onAction="#doAction" text="Divide" toggleGroup="$rb" />
+          </children>
+        </HBox>
+        <Button fx:id="cmdCalc" mnemonicParsing="false" onAction="#doCalc" text="Calculate" GridPane.columnIndex="0" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+        <Label fx:id="lblRes" text="Result:" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+          <font>
+            <Font size="20.0" />
+          </font>
+        </Label>
+      </children>
+      <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+      </columnConstraints>
+      <rowConstraints>
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      </rowConstraints>
+    </GridPane>
+  </center>
+  <top>
+    <MenuBar>
+      <menus>
+        <Menu mnemonicParsing="false" text="Action">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#doAction" text="Add" fx:id="mnuActionAdd" />
+            <MenuItem mnemonicParsing="false" onAction="#doAction" text="Subtract" fx:id="mnuActionSub" />
+            <MenuItem mnemonicParsing="false" onAction="#doAction" text="Multiply" fx:id="mnuActionMul" />
+            <MenuItem mnemonicParsing="false" onAction="#doAction" text="Divide" fx:id="mnuActionDiv" />
+            <MenuItem mnemonicParsing="false" onAction="#doCalc" text="Calculate" />
+          </items>
+        </Menu>
+        <Menu mnemonicParsing="false" text="Application">
+          <items>
+            <MenuItem mnemonicParsing="false" onAction="#doExit" text="Exit" fx:id="mnuApplicationExit" />
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+  </top>
+</BorderPane>
