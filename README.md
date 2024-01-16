@@ -17,7 +17,7 @@ The **Java Projects Repository** is a compilation of diverse Java projects devel
    - *Description:* An extension of the Inventory Management project with integrated database functionality. This enhancement allows for persistent storage of inventory data, contributing to more robust and scalable data management.
 
 5. **War Card Game Console**
-   - *Description:* A console-based implementation of the classic card game "War." Players engage in a card battle, with the objective of winning all the cards. The game involves strategy, luck, and is a fun way to explore basic card game mechanics.
+   - *Description:* A console-based implementation of the classic card game "War." Players engage in card battle, with the objective of winning all the cards. The game involves strategy, luck, and is a fun way to explore basic card game mechanics.
 
 ### Purpose
 
